@@ -23,4 +23,11 @@ class Invoker
             this._UninstallApp = command;
         }
 
+        public void doit()
+        {
+            Console.WriteLine("Invoker: Does anybody want something done before I begin?");
+            this._InstallApp.Execute();
+            
+        }
+
     }

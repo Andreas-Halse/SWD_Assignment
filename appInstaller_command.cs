@@ -17,7 +17,9 @@
         public void Execute()
         {
             Console.WriteLine("AppInstaller: ");
+
             this._receiver.InstallApp(this._AppName);
+           
             
         }
 

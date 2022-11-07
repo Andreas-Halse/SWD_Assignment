@@ -16,10 +16,11 @@
             //Receiver receiver = new Receiver();
             //invoker.SetOnFinish(new ComplexCommand(receiver, "Send email", "Save report"));
 
-            //invoker.DoSomethingImportant();
+            invoker.doit();
 
 
 
         }
     }
+    
 }
