@@ -1,4 +1,4 @@
-
+//"The specific action"
 class Receiver
     {
         public void InstallApp(string app)

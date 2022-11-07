@@ -12,7 +12,9 @@
 
             invoker.ExecuteInstall(new AppInstaller(receiver, "Tinder"));
 
-            invoker.doit();
+            //invoker.CallInstall();
+            
+            invoker.CallOpen();
 
 
 
