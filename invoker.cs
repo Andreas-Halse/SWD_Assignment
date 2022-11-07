@@ -32,27 +32,19 @@ class Invoker
 
         public void CallInstall()
         {
-            Console.WriteLine("Attempting to install app: ");
             this._InstallApp.Execute();
-            
         }
         public void CallUninstall()
         {
-            Console.WriteLine("Attempting to uninstall app: ");
-            this._UninstallApp.Execute();
-            
+            this._UninstallApp.Undo();
         }
         public void CallOpen()
         {
-            Console.WriteLine("Attempting to open app: ");
             this._OpenApp.Execute();
-
         }
         public void CallClose()
         {
-            Console.WriteLine("Attempting to close app: ");
-            this._CloseApp.Execute();
-            
+            this._CloseApp.Undo();
         }
     
     }

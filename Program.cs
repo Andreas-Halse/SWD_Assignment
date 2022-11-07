@@ -11,11 +11,16 @@
             Receiver receiver = new Receiver();
 
             invoker.ExecuteInstall(new AppInstaller(receiver, "Tinder"));
-
-            //invoker.CallInstall();
+            invoker.CallInstall();
             
+            invoker.OpenApp(new AppManager(receiver,"Tinder"));
             invoker.CallOpen();
-
+            
+            invoker.CloseApp(new AppManager(receiver, "Tinder"));
+            invoker.CallClose();
+            
+            invoker.UndoUninstall(new AppInstaller(receiver, "Tinder"));
+            invoker.CallUninstall();
 
 
         }
