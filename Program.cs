@@ -4,8 +4,22 @@
     {
         static void Main(string[] args)
         {
-           // This main functions as the receiver of the command pattern 
+           // The main program:
+
            
+            Invoker invoker = new Invoker();
+            Receiver receiver = new Receiver();
+
+            invoker.ExecuteInstall(new AppInstaller(receiver, "Tinder"));
+
+            //invoker.SetOnStart(new SimpleCommand("Say Hi!"));
+            //Receiver receiver = new Receiver();
+            //invoker.SetOnFinish(new ComplexCommand(receiver, "Send email", "Save report"));
+
+            //invoker.DoSomethingImportant();
+
+
+
         }
     }
 }

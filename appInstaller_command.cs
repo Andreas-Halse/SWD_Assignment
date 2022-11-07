@@ -24,6 +24,7 @@
         // Undo command ....
         public void Undo()
         {
+            Console.WriteLine("AppInstaller: ");
             this._receiver.UninstallApp(this._AppName);
         }
     }

@@ -24,6 +24,7 @@
         // Undo command ....
         public void Undo()
         {
+            Console.WriteLine("AppManger: ");
             this._receiver.CloseApp(this._AppName);
         }
     }
