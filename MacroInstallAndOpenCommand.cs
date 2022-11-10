@@ -1,4 +1,4 @@
-// This is the implementation for the AppInstaller command
+// This is the implementation for the Macro command
 using System;
 using HelloWorld;
 class MacroInstallAndOpenCommand : ICommand
