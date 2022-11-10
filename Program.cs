@@ -17,13 +17,9 @@
             ICommand Macro = new MacroInstallAndOpenCommand(receiver, "Facebook");
 
             invoker.SetInstallCommand(InstallApp);
-
-            
             invoker.SetOpenAppCommand(OpenApp);
             invoker.SetCloseAppCommand(CloseApp);
-
             invoker.SetUninstallCommand(UninstallApp);
-
             invoker.SetMacroInstallAndOpen(Macro);
            
             invoker.CallInstall();
@@ -33,15 +29,7 @@
             invoker.CallInstallAndOpen();   
             invoker.Undo();
             invoker.Undo();
-
-
-
             
-            
-
-            
-
-
         }
     }
     

@@ -30,7 +30,7 @@ class MacroInstallAndOpenCommand : ICommand
         public void Undo()
         {
             Console.WriteLine("Macro undo: ");
-            installCommand.Undo();
             OpenCommand.Undo();
+            installCommand.Undo();
         }
     }

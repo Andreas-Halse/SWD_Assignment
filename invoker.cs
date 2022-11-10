@@ -71,13 +71,11 @@ class Invoker
         {
             if(_CommandBuffer.Count>0)
             {
-            ICommand undoCommand = _CommandBuffer.Last();
+                ICommand undoCommand = _CommandBuffer.Last();
 
-            undoCommand.Undo();
-            _CommandBuffer.RemoveAt(_CommandBuffer.Count-1);
+                undoCommand.Undo();
+                _CommandBuffer.RemoveAt(_CommandBuffer.Count-1);
             }
-           
 
         }
-    
-    }
+}
