@@ -1,5 +1,6 @@
 // This is the implementation for the AppInstaller command
-   class AppInstaller : ICommand
+using HelloWorld;   
+class AppInstaller : ICommand
     {
         private Receiver _receiver;
 

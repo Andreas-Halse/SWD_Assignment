@@ -1,5 +1,6 @@
 // This is the implementation for the AppInstaller command
 using System;
+using HelloWorld
 
 class UninstallCommand : ICommand
 {
