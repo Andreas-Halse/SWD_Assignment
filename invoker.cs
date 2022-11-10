@@ -8,13 +8,6 @@ class Invoker
     private List<ICommand> _CommandBuffer = new List<ICommand>();
     
         
-        //public Invoker(ICommand InstallApp, ICommand UninstallApp)
-        //{
-        //    this._InstallApp = InstallApp;
-        //    this._UninstallApp = UninstallApp;
-        //}
-
-        
         public void SetInstallCommand(ICommand command)
         {
             this._InstallApp = command;
