@@ -9,17 +9,22 @@
            
             Invoker invoker = new Invoker();
             Receiver receiver = new Receiver();
+            
+            ICommand InstallApp = new AppInstaller(receiver, "AppInstaller");
+            ICommand UninstallApp = new UninstallCommand(receiver, "UninstallCommand");
+            ICommand OpenApp = new OpenAppCommand(receiver, "OpenAppCommand");
+            ICommand CloseApp = new CloseAppCommand(receiver, "CloseAppCommand");
 
-            invoker.ExecuteInstall(new AppInstaller(receiver, "Tinder"));
+            invoker.SetInstallCommand(InstallApp);
             invoker.CallInstall();
             
-            invoker.OpenApp(new AppManager(receiver,"Tinder"));
+            invoker.SetUninstallCommand(UninstallApp);
             invoker.CallOpen();
             
-            invoker.CloseApp(new AppManager(receiver, "Tinder"));
+            invoker.SetOpenAppCommand(OpenApp);
             invoker.CallClose();
             
-            invoker.UndoUninstall(new AppInstaller(receiver, "Tinder"));
+            invoker.SetCloseAppCommand(CloseApp);
             invoker.CallUninstall();
 
 

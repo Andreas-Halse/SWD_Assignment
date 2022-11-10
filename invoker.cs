@@ -1,4 +1,5 @@
 // This part of the program functions as the invoker of the command pattern
+using HelloWorld;
 
 class Invoker
 {
@@ -11,21 +12,21 @@ class Invoker
         //    this._UninstallApp = UninstallApp;
         //}
 
-        public void ExecuteInstall(ICommand command)
+        public void SetInstallCommand(ICommand command)
         {
             this._InstallApp = command;
         }
 
-        public void UndoUninstall(ICommand command)
+        public void SetUninstallCommand(ICommand command)
         {
             this._UninstallApp = command;
         }
         
-        public void CloseApp(ICommand command)
+        public void SetCloseAppCommand(ICommand command)
         {
             this._CloseApp = command;
         }
-        public void OpenApp(ICommand command)
+        public void SetOpenAppCommand(ICommand command)
         {
             this._OpenApp = command;
         }
