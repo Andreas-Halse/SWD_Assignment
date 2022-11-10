@@ -3,7 +3,7 @@ using HelloWorld;
 
 class Invoker
 {
-    private ICommand? _InstallApp, _UninstallApp, _CloseApp, _OpenApp;
+    private ICommand? _InstallApp, _UninstallApp, _CloseApp, _OpenApp, _MacroInstallAndOpen;
 
         
         //public Invoker(ICommand InstallApp, ICommand UninstallApp)
@@ -31,13 +31,18 @@ class Invoker
             this._OpenApp = command;
         }
 
+        public void SetMacroInstallAndOpen(ICommand command)
+        {
+            this._MacroInstallAndOpen= command;
+        }
+
         public void CallInstall()
         {
             this._InstallApp.Execute();
         }
         public void CallUninstall()
         {
-            this._UninstallApp.Undo();
+            this._UninstallApp.Execute();
         }
         public void CallOpen()
         {
@@ -45,7 +50,12 @@ class Invoker
         }
         public void CallClose()
         {
-            this._CloseApp.Undo();
+            this._CloseApp.Execute();
+        }
+
+        public void CallInstallAndOpen()
+        {
+            this._MacroInstallAndOpen.Execute();
         }
     
     }

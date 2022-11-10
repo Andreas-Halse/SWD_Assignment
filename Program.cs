@@ -10,22 +10,32 @@
             Invoker invoker = new Invoker();
             Receiver receiver = new Receiver();
             
-            ICommand InstallApp = new AppInstaller(receiver, "AppInstaller");
-            ICommand UninstallApp = new UninstallCommand(receiver, "UninstallCommand");
-            ICommand OpenApp = new OpenAppCommand(receiver, "OpenAppCommand");
-            ICommand CloseApp = new CloseAppCommand(receiver, "CloseAppCommand");
+            ICommand InstallApp = new InstallCommand(receiver, "Tinder");
+            ICommand UninstallApp = new UninstallCommand(receiver, "Tinder");
+            ICommand OpenApp = new OpenCommand(receiver, "Tinder");
+            ICommand CloseApp = new CloseAppCommand(receiver, "Tinder");
+            ICommand Macro = new MacroInstallAndOpenCommand(receiver, "Facebook");
 
             invoker.SetInstallCommand(InstallApp);
             invoker.CallInstall();
-            
-            invoker.SetUninstallCommand(UninstallApp);
-            invoker.CallOpen();
+
             
             invoker.SetOpenAppCommand(OpenApp);
-            invoker.CallClose();
-            
+            invoker.CallOpen();
             invoker.SetCloseAppCommand(CloseApp);
+            invoker.CallClose();
+
+            invoker.SetUninstallCommand(UninstallApp);
             invoker.CallUninstall();
+
+            invoker.SetMacroInstallAndOpen(Macro);
+            invoker.CallInstallAndOpen();   
+           
+
+            
+            
+
+            
 
 
         }

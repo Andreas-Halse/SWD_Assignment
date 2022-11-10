@@ -1,6 +1,6 @@
 // This is the implementation for the AppInstaller command
 using HelloWorld;   
-class AppInstaller : ICommand
+class InstallCommand : ICommand
     {
         private Receiver _receiver;
 
@@ -8,7 +8,7 @@ class AppInstaller : ICommand
         private string _AppName;
 
       
-        public AppInstaller(Receiver receiver, string AppName)
+        public InstallCommand(Receiver receiver, string AppName)
         {
             this._receiver = receiver;
             this._AppName = AppName;

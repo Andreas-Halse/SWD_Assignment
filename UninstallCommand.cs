@@ -1,6 +1,6 @@
 // This is the implementation for the AppInstaller command
 using System;
-using HelloWorld
+using HelloWorld;
 
 class UninstallCommand : ICommand
 {
@@ -10,7 +10,7 @@ class UninstallCommand : ICommand
         private string _AppName;
 
       
-        public AppInstaller(Receiver receiver, string AppName)
+        public UninstallCommand(Receiver receiver, string AppName)
         {
             this._receiver = receiver;
             this._AppName = AppName;

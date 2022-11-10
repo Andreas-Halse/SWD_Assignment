@@ -1,6 +1,6 @@
 // This is the implementation for the AppInstaller command
 using System;
-using HelloWorld
+using HelloWorld;
 
 class CloseAppCommand : ICommand
 {
@@ -10,7 +10,7 @@ class CloseAppCommand : ICommand
         private string _AppName;
 
       
-        public AppManager(Receiver receiver, string AppName)
+        public CloseAppCommand(Receiver receiver, string AppName)
         {
             this._receiver = receiver;
             this._AppName = AppName;

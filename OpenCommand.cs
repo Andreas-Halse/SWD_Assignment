@@ -1,5 +1,5 @@
 // This is the implementation for the AppInstaller command
-   class AppManager : ICommand
+   class OpenCommand : ICommand
     {
         private Receiver _receiver;
 
@@ -7,7 +7,7 @@
         private string _AppName;
 
       
-        public AppManager(Receiver receiver, string AppName)
+        public OpenCommand(Receiver receiver, string AppName)
         {
             this._receiver = receiver;
             this._AppName = AppName;
